@@ -1,0 +1,59 @@
+baseURL = "https://demdxx.com/"
+languageCode = "en-us"
+title = "Demdxx"
+theme = "split"
+disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
+
+# Enter your tracking code to enable Google Analytics
+googleAnalytics = ""
+
+# Copyright
+copyright = "&copy;2019 Demdxx"
+
+[params]
+
+  # Metadata for search engines and social sharing
+  author = "Dmitry Ponomarev"
+  description = ""
+  # shareImage = "images/social.jpg"
+  # twitterHandle = "onepagelove"
+
+  # Favicon
+  favicon = "favicon.ico"
+
+  # Section - Visual
+  [params.visual]
+
+    # Image
+    [params.visual.image]
+      enable = true
+      file = "images/background.jpg"
+      position = "center center"
+
+    # Video
+    # [params.visual.video]
+    #   enable = false
+    #   mute = true
+    #   file = "videos/background.mp4"
+    #   # youtubeId = "dk9uNWPP7EA"
+
+  # Links List #1
+  [[params.links]]
+    [params.links.list1]
+      heading = "Social"
+
+      [[params.links.list1.link]]
+        text = "Linkedin"
+        url = "https://linkedin.com/in/demdxx/"
+
+      [[params.links.list1.link]]
+        text = "GitHub"
+        url = "https://github.com/demdxx"
+
+      [[params.links.list1.link]]
+        text = "Instagram"
+        url = "https://www.instagram.com/demdxx/"
+
+      [[params.links.list1.link]]
+        text = "Facebook"
+        url = "https://www.facebook.com/demdxx"
