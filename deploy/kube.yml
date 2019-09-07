@@ -5,7 +5,7 @@ metadata:
 spec:
   ports:
   - port: 80
-    targetPort: 8080
+    targetPort: 80
   selector:
     app: app-demdxx
 ---
@@ -35,7 +35,7 @@ spec:
             memory: "32Mi"
             cpu: "100m"
         ports:
-        - containerPort: 8080
+        - containerPort: 80
       imagePullSecrets:
       - name: registry-access
 ---

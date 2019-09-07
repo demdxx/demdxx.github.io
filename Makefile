@@ -4,9 +4,9 @@ godep:
 build:
 	- hugo
 	- rm -fR public/videos
-	docker build -f deploy/Dockerfile -t registry.geniusrabbit.dev/personal/demdxx .
+	docker build -f deploy/Dockerfile -t registry.geniusrabbit.dev/demdxx/www .
 
 sync:
-	docker push registry.geniusrabbit.dev/personal/demdxx
+	docker push registry.geniusrabbit.dev/demdxx/www
 
 deploy: build sync
