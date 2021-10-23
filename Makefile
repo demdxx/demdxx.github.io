@@ -7,6 +7,10 @@ build: build ## Build application
 	- hugo
 	- rm -fR public/videos
 
+.PHONY: github-deploy
+github-deploy: build ## Deploy to github pages
+	git subtree push --prefix public/ origin gh-pages
+
 build-docker: ## Build docker image
 	docker build -f deploy/Dockerfile -t registry.geniusrabbit.dev/demdxx/www .
 
