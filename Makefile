@@ -3,7 +3,7 @@ $(godep): ## Download hugo tools
 	go get -v github.com/gohugoio/hugo
 
 .PHONY: build
-build: $(godep) build ## Build application
+build: $(godep) ## Build application
 	hugo
 	- rm -fR public/videos
 	echo "demdxx.com" > public/CNAME
