@@ -1,9 +1,8 @@
-.PHONY: $(godep)
-$(godep): ## Download hugo tools
-	go get -v github.com/gohugoio/hugo
+.GODEPS:
+	go install github.com/gohugoio/hugo@latest
 
 .PHONY: build
-build: $(godep) ## Build application
+build: .GODEPS ## Build application
 	hugo
 	- rm -fR public/videos
 	echo "demdxx.com" > public/CNAME
