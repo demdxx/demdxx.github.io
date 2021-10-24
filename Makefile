@@ -1,11 +1,12 @@
-.PHONY: godep
-godep: ## Download hugo tools
+.PHONY: $(godep)
+$(godep): ## Download hugo tools
 	go get -v github.com/gohugoio/hugo
 
 .PHONY: build
-build: build ## Build application
-	- hugo
+build: $(godep) build ## Build application
+	hugo
 	- rm -fR public/videos
+	echo "demdxx.com" > public/CNAME
 
 .PHONY: github-deploy
 github-deploy: build ## Deploy to github pages
