@@ -8,7 +8,7 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 googleAnalytics = "UA-70463023-2"
 
 # Copyright
-copyright = "&copy;2019-2022 Demdxx"
+copyright = "&copy;2019-2023 Demdxx"
 
 [params]
 
@@ -35,7 +35,7 @@ copyright = "&copy;2019-2022 Demdxx"
       enable = true
       mute = true
       # file = "videos/background.mp4"
-      youtubeId = "1Z5OZaBR_7c"
+      youtubeId = "00SeMTLTSWo"
 
     # Video
     # [params.visual.video]
