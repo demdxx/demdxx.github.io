@@ -8,7 +8,111 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm", "RSS", "sitemap"]
 googleAnalytics = "UA-70463023-2"
 
 # Copyright
-copyright = "&copy;2019-2023 Demdxx"
+copyright = "&copy;2019 &ndash; 2024 Demdxx"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.es]
+    title = "Demdxx (No a la Guerra 🇺🇦)"
+    languageName = "Español"
+    weight = 1
+    [languages.es.params]
+      description = "Demdxx - Site personal de Dmitry Ponomarev"
+      # shareImage = "images/social.jpg"
+      # twitterHandle = "onepagelove"
+      [[languages.es.params.links]]
+        [languages.es.params.links.list1]
+          heading = "Social (contacto)"
+
+          [[languages.es.params.links.list1.link]]
+            text = "Linkedin"
+            url = "https://linkedin.com/in/demdxx/"
+
+          [[languages.es.params.links.list1.link]]
+            text = "GitHub"
+            url = "https://github.com/demdxx"
+
+          [[languages.es.params.links.list1.link]]
+            text = "Instagram"
+            url = "https://www.instagram.com/demdxx/"
+
+          [[languages.es.params.links.list1.link]]
+            text = "Facebook"
+            url = "https://www.facebook.com/demdxx"
+
+        # [languages.es.params.links.list2]
+        #   heading = "Contact"
+
+        #   [[languages.es.params.links.list2.link]]
+        #     text = "Email"
+        #     url = "mailto:demdxx@gmail.com"
+
+        [languages.es.params.links.list3]
+          heading = "Other"
+          [[languages.es.params.links.list3.link]]
+            text = "Manifest"
+            url = "https://github.com/demdxx/manifest"
+          [[languages.es.params.links.list3.link]]
+            text = "Cookies policy"
+            url = "/es/cookies-policy/"
+          [[languages.es.params.links.list3.link]]
+            text = "Política de Privacidad"
+            url = "/es/privacy-policy/"
+          [[languages.es.params.links.list3.link]]
+            text = "Terminos y condiciones"
+            url = "/es/terms-of-conditions/"
+  [languages.en]
+    title = "Demdxx (No War 🇺🇦)"
+    languageName = "English"
+    weight = 2
+    [languages.en.params]
+      description = "Demdxx - Personal site of Dmitry Ponomarev"
+      # shareImage = "images/social.jpg"
+      # twitterHandle = "onepagelove"
+      [[languages.en.params.links]]
+        [languages.en.params.links.list1]
+          heading = "Social (contact)"
+
+          [[languages.en.params.links.list1.link]]
+            text = "Linkedin"
+            url = "https://linkedin.com/in/demdxx/"
+
+          [[languages.en.params.links.list1.link]]
+            text = "GitHub"
+            url = "https://github.com/demdxx"
+
+          [[languages.en.params.links.list1.link]]
+            text = "Instagram"
+            url = "https://www.instagram.com/demdxx/"
+
+          [[languages.en.params.links.list1.link]]
+            text = "Facebook"
+            url = "https://www.facebook.com/demdxx"
+
+        # [languages.en.params.links.list2]
+        #   heading = "Contact"
+
+        #   [[languages.en.params.links.list2.link]]
+        #     text = "Email"
+        #     url = "mailto:demdxx@gmail.com"
+
+        [languages.en.params.links.list3]
+          heading = "Other"
+          [[languages.en.params.links.list3.link]]
+            text = "Manifest"
+            url = "https://github.com/demdxx/manifest"
+          [[languages.en.params.links.list3.link]]
+            text = "Cookies policy"
+            url = "/en/cookies-policy/"
+          [[languages.en.params.links.list3.link]]
+            text = "Privacy policy"
+            url = "/en/privacy-policy/"
+          [[languages.en.params.links.list3.link]]
+            text = "Terms of conditions"
+            url = "/en/terms-of-conditions/"
+
 
 [params]
 
@@ -25,17 +129,17 @@ copyright = "&copy;2019-2023 Demdxx"
   [params.visual]
 
     # Image
-    # [params.visual.image]
-    #   enable = true
-    #   file = "images/background.webp"
-    #   position = "center center"
+    [params.visual.image]
+      enable = true
+      file = "images/background2.jpg"
+      position = "center center"
 
     # Video
-    [params.visual.video]
-      enable = true
-      mute = true
-      # file = "videos/background.mp4"
-      youtubeId = "00SeMTLTSWo"
+    # [params.visual.video]
+    #   enable = true
+    #   mute = true
+    #   # file = "videos/background.mp4"
+    #   youtubeId = "00SeMTLTSWo"
 
     # Video
     # [params.visual.video]
@@ -43,28 +147,3 @@ copyright = "&copy;2019-2023 Demdxx"
     #   mute = true
     #   file = "videos/background.mp4"
     #   # youtubeId = "dk9uNWPP7EA"
-
-  # Links List #1
-  [[params.links]]
-    [params.links.list1]
-      heading = "Social"
-
-      [[params.links.list1.link]]
-        text = "Manifest"
-        url = "https://github.com/demdxx/manifest"
-
-      [[params.links.list1.link]]
-        text = "Linkedin"
-        url = "https://linkedin.com/in/demdxx/"
-
-      [[params.links.list1.link]]
-        text = "GitHub"
-        url = "https://github.com/demdxx"
-
-      [[params.links.list1.link]]
-        text = "Instagram"
-        url = "https://www.instagram.com/demdxx/"
-
-      [[params.links.list1.link]]
-        text = "Facebook"
-        url = "https://www.facebook.com/demdxx"

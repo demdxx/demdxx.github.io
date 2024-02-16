@@ -1,0 +1,13 @@
+<ul class="languages select">
+  <li><a href="/{{site.LanguageCode}}/">🏠</a></li>
+{{- range $.Site.Home.AllTranslations -}}
+  {{- if eq .Language.Lang site.LanguageCode }}
+    <li class="selected">{{.Language.Lang}}</li>
+  {{- else -}}
+    {{/*<li><a href="{{ .RelPermalink }}">[{{.Language.Lang}}]</a></li>*/}}
+  {{- end -}}
+{{- end -}}
+{{range .Translations}}
+  <li><a href="{{ .Permalink }}">[{{ .Language.Lang }}]</a></li>
+{{end}}
+</ul>

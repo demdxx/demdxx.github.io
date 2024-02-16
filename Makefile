@@ -5,27 +5,17 @@ export GOFLAGS=-mod=mod
 export GODEBUG := tls13=0
 
 .GODEPS:
-	go install github.com/gohugoio/hugo@latest
+	go install -tags extended github.com/gohugoio/hugo@latest
 
 .PHONY: build
 build: .GODEPS ## Build application
-	hugo
+	hugo --minify
 	- rm -fR public/videos
 	echo "demdxx.com" > public/CNAME
 
-.PHONY: github-deploy
-github-deploy: build ## Deploy to github pages
-	git subtree push --prefix public/ origin gh-pages
-
-build-docker: ## Build docker image
-	docker build -f deploy/Dockerfile -t registry.geniusrabbit.dev/demdxx/www .
-
-.PHONY: sync
-sync: ## Sync docker image
-	docker push registry.geniusrabbit.dev/demdxx/www
-
-.PHONY: deploy
-deploy: build sync ## Deploy docker image
+.PHONY: run
+run: ## Run application
+	hugo server -D
 
 .PHONY: help
 help:
