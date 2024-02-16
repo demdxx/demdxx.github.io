@@ -11,3 +11,10 @@ Description: Split is a centrally-divided layout for a professional online prese
 
 /* -- Content -- */
 @import "01-content";
+
+/* -- Header -- */
+.languages {
+  &.select {
+    display: none;
+  }
+}
