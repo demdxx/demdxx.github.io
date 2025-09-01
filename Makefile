@@ -1,3 +1,4 @@
+HUGO_URI := -tags extended,withdeploy github.com/gohugoio/hugo@v0.128
 export GOSUMDB := off
 export GOFLAGS=-mod=mod
 # Go 1.13 defaults to TLS 1.3 and requires an opt-out.  Opting out for now until certs can be regenerated before 1.14
@@ -5,11 +6,11 @@ export GOFLAGS=-mod=mod
 export GODEBUG := tls13=0
 
 .GODEPS:
-	go install -tags extended github.com/gohugoio/hugo@latest
+	go install ${HUGO_URI}
 
 .PHONY: build
 build: .GODEPS ## Build application
-	hugo --minify
+	CGO_ENABLED=1 go run ${HUGO_URI} --minify
 	- rm -fR public/videos
 	echo "demdxx.com" > public/CNAME
 
