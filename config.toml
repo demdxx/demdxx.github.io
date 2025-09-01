@@ -52,9 +52,6 @@ defaultContentLanguageInSubdir = true
         [languages.es.params.links.list3]
           heading = "Other"
           [[languages.es.params.links.list3.link]]
-            text = "Manifest"
-            url = "https://github.com/demdxx/manifest"
-          [[languages.es.params.links.list3.link]]
             text = "Cookies policy"
             url = "/es/cookies-policy/"
           [[languages.es.params.links.list3.link]]
@@ -64,7 +61,7 @@ defaultContentLanguageInSubdir = true
             text = "Terminos y condiciones"
             url = "/es/terms-of-conditions/"
   [languages.en]
-    title = "Demdxx (No War 🇺🇦)"
+    title = "Demdxx"
     languageName = "English"
     weight = 2
     [languages.en.params]
@@ -100,9 +97,6 @@ defaultContentLanguageInSubdir = true
 
         [languages.en.params.links.list3]
           heading = "Other"
-          [[languages.en.params.links.list3.link]]
-            text = "Manifest"
-            url = "https://github.com/demdxx/manifest"
           [[languages.en.params.links.list3.link]]
             text = "Cookies policy"
             url = "/en/cookies-policy/"

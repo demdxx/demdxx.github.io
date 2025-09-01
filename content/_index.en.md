@@ -1,5 +1,5 @@
 +++
-title = "Demdxx (No War 🇺🇦)"
+title = "Demdxx"
 tagline = "Software Engineer & Self-employed"
 +++
 
