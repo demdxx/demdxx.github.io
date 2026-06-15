@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: var(--font-orbitron), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-neon-cyan: #00f5ff;
+  --color-neon-magenta: #ff00aa;
+  --color-neon-purple: #a855f7;
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.12);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-[#050510] font-[family-name:var(--font-body)] text-slate-200 antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(168, 85, 247, 0.25), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 50%, rgba(0, 245, 255, 0.08), transparent),
+      radial-gradient(ellipse 50% 30% at 0% 80%, rgba(255, 0, 170, 0.1), transparent);
+  }
+
+  ::selection {
+    @apply bg-fuchsia-500/40 text-white;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl backdrop-blur-xl;
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 60px rgba(168, 85, 247, 0.06);
+  }
+
+  .glass-panel-hover {
+    @apply transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.06];
+    &:hover {
+      box-shadow:
+        0 0 0 1px rgba(0, 245, 255, 0.1) inset,
+        0 8px 32px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(0, 245, 255, 0.08);
+    }
+  }
+
+  .neon-text {
+    @apply bg-gradient-to-r from-cyan-300 via-fuchsia-300 to-purple-400 bg-clip-text text-transparent;
+    text-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+  }
+
+  .neon-link {
+    @apply text-cyan-300/90 transition-colors duration-200 hover:text-cyan-200;
+    &:hover {
+      text-shadow: 0 0 12px rgba(0, 245, 255, 0.5);
+    }
+  }
+
+  .prose-legal {
+    @apply max-w-none text-slate-300/90;
+
+    h2 {
+      @apply mt-10 mb-4 border-b border-white/10 pb-2 font-[family-name:var(--font-display)] text-lg tracking-wide text-cyan-200/90 uppercase;
+    }
+
+    h3 {
+      @apply mt-6 mb-3 font-semibold text-fuchsia-200/90;
+    }
+
+    p {
+      @apply mb-4 leading-relaxed;
+    }
+
+    ul {
+      @apply mb-4 list-disc space-y-2 pl-6;
+    }
+
+    li {
+      @apply leading-relaxed;
+    }
+
+    a {
+      @apply text-cyan-300/90 underline decoration-cyan-400/30 underline-offset-2 transition-colors duration-200 hover:text-cyan-200;
+    }
+
+    strong {
+      @apply font-semibold text-white/90;
+    }
+  }
+
+  .prose-manifest {
+    @apply max-w-none text-slate-200/90;
+
+    p {
+      @apply mb-6 border-l-2 border-cyan-400/20 pl-5 text-base leading-relaxed md:text-lg;
+    }
+
+    p:last-child {
+      @apply border-fuchsia-400/40 font-[family-name:var(--font-display)] text-lg tracking-wide text-cyan-200/95 md:text-xl;
+    }
+  }
+}
+
+@layer utilities {
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}

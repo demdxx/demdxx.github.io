@@ -1,4 +1,7 @@
-public/
+node_modules/
+.next/
+out/
 .DS_Store
 Thumbs.db
-.hugo_build.lock
+*.log
+.env*.local
