@@ -34,9 +34,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${orbitron.variable}`}>
+      <head>
+        <GoogleAnalytics />
+      </head>
       <body className="flex min-h-screen flex-col">
         {children}
-        <GoogleAnalytics />
       </body>
     </html>
   );

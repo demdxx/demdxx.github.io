@@ -26,6 +26,13 @@ export const siteConfig = {
   ],
 };
 
+export const slogan: Record<Locale, { main: string; translation?: string }> = {
+  en: { main: "No Lie — No Cry" },
+  es: { main: "No Lie — No Cry", translation: "sin mentiras — sin sufrimiento" },
+  ru: { main: "No Lie — No Cry", translation: "нет лжи — нет страданий" },
+  ja: { main: "No Lie — No Cry", translation: "嘘なし — 苦しみなし" },
+};
+
 export type NavLabels = {
   home: string;
   socialHeading: string;
