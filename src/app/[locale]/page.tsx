@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { GlassCard } from "@/components/GlassCard";
+import { HeroImageStrip } from "@/components/HeroImageStrip";
 import { MarkdownContent } from "@/components/MarkdownContent";
 import { SocialLinks } from "@/components/SocialLinks";
 import { getHomeContent } from "@/lib/content";
@@ -19,6 +20,7 @@ export default async function HomePage({ params }: PageProps) {
 
   return (
     <div className="space-y-8">
+      <HeroImageStrip locale={locale} />
       <GlassCard className="relative overflow-hidden">
         <div className="absolute -top-24 -right-24 h-48 w-48 rounded-full bg-cyan-400/10 blur-3xl" />
         <div className="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-fuchsia-500/10 blur-3xl" />
