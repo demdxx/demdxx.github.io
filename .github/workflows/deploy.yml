@@ -36,9 +36,9 @@ jobs:
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: touch out/.nojekyll
 
-      - name: Deploy to gh-pages
+      - name: Deploy to gh-pages2
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
+          branch: gh-pages2
           folder: out
